@@ -1,16 +1,10 @@
 import React from 'react';
 import { StyleSheet, View, StatusBar, TouchableOpacity, TextInput, Text } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/native';
 
 interface Props {}
-interface State {
+interface State {}
 
-}
-
-const Drawer = createDrawerNavigator();
-
-export class MainScreen extends React.Component<Props, State> {
+export class SwipeMenuView extends React.Component<Props, State> {
 
     constructor(props) {
         super(props);     
@@ -31,7 +25,9 @@ export class MainScreen extends React.Component<Props, State> {
 
         return(
             <View style={styles.container}>
-                
+                <View style={styles.button}>
+
+                </View>
             </View>
         )
     }
@@ -40,6 +36,12 @@ export class MainScreen extends React.Component<Props, State> {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'blue'
+        backgroundColor: '#876543'
     },
+
+    button: {
+        backgroundColor: 'red', 
+        width: 100, 
+        height: 100
+    }
 })
