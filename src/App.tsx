@@ -23,8 +23,8 @@ export default class App extends React.Component<Props, State> { // 클래스 �
     test6 = 1; // 같은 페키지(앱) 안에서만 사용가능한 변수
     public test7 = false; // 같은 패키지(앱)이 아닌 외부 제3 프로그램에서 접근 가능한 변수
 
-    constructor(props) {
-        super(props);     
+    constructor(props) { // 생성자 : 페이지가 처음 로딩 될 때 실행된다. 생성자 > 렌더 > componentDidMount 순서로 로딩
+        super(props);
     }
     
     componentDidMount(): void { // 페이지가 렌더링 된 후 자동 실행되는 함수
