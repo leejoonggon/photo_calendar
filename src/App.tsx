@@ -6,6 +6,16 @@ import { SwipeMenuView } from './commonViews/SwipeMenuView';
 import AppNavigation from './AppNavigation';
 import { DateExportScreen } from './screens/dataExport/DateExportScreen';
 import { NewInputScreen } from './screens/newInput/NewInputScreen';
+import { EditInputScreen } from './screens/EditInputScreen';
+import { ImageClickScreen } from './screens/ImageClickScreen';
+import { MonthPhotoScreen } from './screens/MonthPhotoScreen';
+import { TotalCalendarScreen} from './screens/TotalCalendarScreen';
+
+
+
+
+
+
 
 
 
@@ -83,7 +93,7 @@ export default class App extends React.Component<Props, State> { // 클래스 �
                     </Drawer.Navigator>
                 </NavigationContainer> */}
 
-                < NewInputScreen />
+                < TotalCalendarScreen />
             </View>
         )
     }
