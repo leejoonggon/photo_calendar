@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, View, StatusBar, TouchableOpacity, TextInput, Text } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer'; //네비게이션
 import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/native'; //네비게이션
-import { LoginScreen } from './screens/login/LoginScreen';
 import { SwipeMenuView } from './commonViews/SwipeMenuView';
+import AppNavigation from './AppNavigation';
 
 interface Props {}
 interface State {}
@@ -47,13 +47,10 @@ export default class App extends React.Component<Props, State> { // 클래스 �
                     hidden={true}
                 />
                 {
-                    // 네비게이션을 쓰기위한 최상위 컨테이너 ( 필수임 ) 스택이던 드로우던 상관없이 필수
+                    // 네비게이션을 쓰기위한 최상위 컨테이너 ( 필수임 ) 스택이던 드로우던 상관없이 필수 ( 최상단에 1번만 사용 )
                 }
                 <NavigationContainer>
-                    {
-                        // 드로우 네비게이션 사용
-                    }
-                    <Drawer.Navigator
+                    <Drawer.Navigator //드로우 네비게이션 생성
                         screenOptions={ // 스크린 옵션들
                             {
                                 drawerPosition: 'left', // 메뉴가 왼쪽에 열릴건지 오른쪽에 열린건지
@@ -68,7 +65,7 @@ export default class App extends React.Component<Props, State> { // 클래스 �
                         drawerContent={ (props)=>  // 드로우네비게이션에 기본 메뉴구성을 안쓰고 커스터마이징 메뉴를 쓸때 사용하는 프로퍼티
                             <SwipeMenuView />
                         }
-                        initialRouteName='home' // 초기 스크린
+                        initialRouteName='navigation' // 초기 스크린
                         defaultStatus='closed' // 처음 앱이 켜졌을때 닫혀있을것인가 열려있을것인가 closed 가 닫혀잇는거
                         backBehavior='history' // 뒤로가기 버튼을 눌렀을때 행동방식 이전 스크린으로 돌아감 ( history )
                     >
@@ -76,8 +73,8 @@ export default class App extends React.Component<Props, State> { // 클래스 �
                             // 드로우 네비게이션 스크린들
                         }  
                         <Drawer.Screen
-                            name='home'
-                            component={ LoginScreen }
+                            name='navigation'
+                            component={ AppNavigation }
                         />
                     </Drawer.Navigator>
                 </NavigationContainer>
