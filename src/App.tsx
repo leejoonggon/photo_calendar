@@ -5,7 +5,7 @@ import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/
 import { SwipeMenuView } from './commonViews/SwipeMenuView';
 import AppNavigation from './AppNavigation';
 import { DateExportScreen } from './screens/dataExport/DateExportScreen';
-import { NewInputScreen } from './screens/NewInputScreen';
+import { NewInputScreen } from './screens/newInput/NewInputScreen';
 
 
 

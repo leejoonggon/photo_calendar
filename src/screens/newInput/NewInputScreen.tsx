@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS } from 'react-native';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
 import { formatDiagnosticsWithColorAndContext } from 'typescript';
-import { DP, SP } from '../util/size';
+import { DP, SP } from '../../util/size';
 
 interface Props {}
 interface State {
@@ -36,14 +36,14 @@ export class NewInputScreen extends React.Component<Props, State> {
 
                 <View style={styles.header_box}>
                     <Image
-                        source={require('./../resources/backicon.png')}
+                        source={require('../../resources/backicon.png')}
                         style={styles.backicon}
                     />
                     <Text style={styles.headertitle_text}>
                         24년 12월12일
                     </Text>
                     <Image
-                        source={require('./../resources/saveicon.png')}
+                        source={require('../../resources/saveicon.png')}
                         style={styles.saveicon}
                     />
                 </View>
@@ -90,14 +90,14 @@ export class NewInputScreen extends React.Component<Props, State> {
 
                 <View style={styles.colorselect_box}>
                     <Image
-                        source={require('./../resources/colornone.png')}
+                        source={require('../../resources/colornone.png')}
                         style={styles.colornone}
                     />
                     <Text style={styles.headertitle_text}>
                         컬러 설정
                     </Text>
                     <Image
-                        source={require('./../resources/unfold.png')}
+                        source={require('../../resources/unfold.png')}
                         style={styles.unfold}
                     />
                 </View>
