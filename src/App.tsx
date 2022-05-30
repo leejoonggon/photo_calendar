@@ -10,6 +10,18 @@ import { SplashScreen } from './screens/SplashScreen';
 import { SearchScreen } from './screens/SearchScreen';
 import { PurchaseScreen } from './screens/PurchaseScreen';
 import { InquireScreen } from './screens/InquireScreen';
+import { EditInputScreen } from './screens/EditInputScreen';
+import { ImageClickScreen } from './screens/ImageClickScreen';
+import { TotalCalendarScreen } from './screens/TotalCalendarScreen';
+
+
+
+
+
+
+
+
+
 
 
 
@@ -96,7 +108,7 @@ export default class App extends React.Component<Props, State> { // 클래스 �
                     </Drawer.Navigator>
                 </NavigationContainer> */}
 
-                < InquireScreen />
+                < PurchaseScreen />
             </View>
         )
     }
