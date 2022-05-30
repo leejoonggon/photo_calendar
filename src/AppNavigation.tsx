@@ -36,7 +36,7 @@ export default class AppNavigation extends React.Component<Props, State> {
                         screenOptions={{
                             headerShown: false
                         }}
-                        initialRouteName='myprofile' 
+                        initialRouteName='setting' 
                     > 
                         {
                             // 스택 네비게이션 스크린들

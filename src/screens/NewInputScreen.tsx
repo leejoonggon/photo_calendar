@@ -93,7 +93,7 @@ export class NewInputScreen extends React.Component<Props, State> {
                         source={require('./../resources/colornone.png')}
                         style={styles.colornone}
                     />
-                    <Text style={styles.headertitle_text}>
+                    <Text style={styles.colorselect_text}>
                         컬러 설정
                     </Text>
                     <Image
@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
     },
  
     imagetext_box: {
-        backgroundColor: 'blue',
+        // backgroundColor: 'blue',
         height: DP(24),
         paddingLeft: DP(25),
         justifyContent: 'center',
@@ -197,7 +197,7 @@ const styles = StyleSheet.create({
     },
 
     input_box: {
-        backgroundColor: 'yellow',
+        // backgroundColor: 'yellow',
         height: DP(100),
         marginTop: DP(48),
         justifyContent: 'space-between',
@@ -239,15 +239,31 @@ const styles = StyleSheet.create({
         height: DP(48),
         marginTop: DP(24),
         alignItems: 'center',
+        // justifyContent: 'space-between',
         flexDirection: 'row',
     },
 
     colornone: {
+        // backgroundColor: 'grey',
+        height: DP(24),
+        width: DP(24),
+        marginLeft: DP(16),
+    },
 
+    colorselect_text: {
+        // backgroundColor: 'orange',
+        height: DP(24),
+        width: DP(248),
+        marginLeft: DP(16),
+        fontSize: SP(16),
+        color: '#7444444',
+        textAlignVertical: 'center',
     },
 
     unfold: {
-
+        height: DP(24),
+        width: DP(24),
+        marginLeft: DP(16),
     },
 
 
