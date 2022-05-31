@@ -144,7 +144,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 
-
     category_text: {
         // backgroundColor: 'orange',
         height: DP(21),
