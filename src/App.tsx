@@ -13,6 +13,16 @@ import { InquireScreen } from './screens/InquireScreen';
 import { EditInputScreen } from './screens/EditInputScreen';
 import { ImageClickScreen } from './screens/ImageClickScreen';
 import { TotalCalendarScreen } from './screens/TotalCalendarScreen';
+import { PasswordScreen } from './screens/PasswordScreen';
+import { AuthorityAgree } from './screens/AuthorityAgree';
+import { ConditionsAgree } from './screens/ConditionsAgree';
+
+
+
+
+
+
+
 
 
 
@@ -108,7 +118,7 @@ export default class App extends React.Component<Props, State> { // 클래스 �
                     </Drawer.Navigator>
                 </NavigationContainer> */}
 
-                < PurchaseScreen />
+                < ConditionsAgree />
             </View>
         )
     }

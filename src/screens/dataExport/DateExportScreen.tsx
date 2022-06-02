@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
 import { displayPartsToString } from 'typescript';
 import { DP, SP } from '../../util/size';
@@ -33,6 +34,8 @@ export class DateExportScreen extends React.Component<Props, State> {
                 <StatusBar 
                     hidden={true}
                 />
+
+            <ScrollView>
 
                 <View style={styles.header_box}>
                     <Image
@@ -150,10 +153,12 @@ export class DateExportScreen extends React.Component<Props, State> {
                         데이터를 모두 삭제합니다.
                     </Text>
                 </View>
-
+            
+            </ScrollView>
                           
             </View>
-        )
+       
+       )
     }
 }
 
