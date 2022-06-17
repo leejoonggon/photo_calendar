@@ -34,10 +34,19 @@ export class SettingScreen extends React.Component<Props, State> {
                 />
 
                 <View style={styles.header_box}>
+                    
+                <TouchableOpacity 
+                    // style={{width: 100, height: 100, backgroundColor: 'red'}}
+                    onPress = { () => {
+                        this.props.navigation.pop();
+                    } }
+                >
                     <Image
                         source={require('../../resources/backicon.png')}
                         style={styles.backicon}
                     />
+                </TouchableOpacity>
+                    
                     <Text style={styles.headertitle_text}>
                         설정
                     </Text>

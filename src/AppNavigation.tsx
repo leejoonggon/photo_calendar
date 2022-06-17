@@ -36,7 +36,7 @@ export default class AppNavigation extends React.Component<Props, State> {
                         screenOptions={{
                             headerShown: false
                         }}
-                        initialRouteName='setting' 
+                        initialRouteName='login' 
                     > 
                         {
                             // 스택 네비게이션 스크린들
@@ -44,6 +44,10 @@ export default class AppNavigation extends React.Component<Props, State> {
                         <Stack.Screen
                             name='login'
                             component={ LoginScreen }
+                            initialParams={{
+                                name: '이유진',
+                                age: 30
+                            }}
                         />
                         <Stack.Screen
                             name='loginput'

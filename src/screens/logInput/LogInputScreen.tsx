@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS } from 'react-native';
+import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS, Pressable } from 'react-native';
 import { DP, SP } from '../../util/size';
 
-interface Props {}
+interface Props {navigation}
 interface State {
 
 }
@@ -22,6 +22,10 @@ export class LogInputScreen extends React.Component<Props, State> {
         
     }
 
+    backNavigation() {
+        this.props.navigation.pop()
+    }
+
  
     render(): React.ReactNode {
 
@@ -31,14 +35,20 @@ export class LogInputScreen extends React.Component<Props, State> {
                 <StatusBar 
                     hidden={true}
                 />
+                <Pressable
+                    onPress={ () => {
+                        this.backNavigation ()
 
-                 <View style={styles.backicon_box}>
-                    <Image
-                        source={require('../../resources/backicon.png')}
-                        style={styles.backicon}
-                    />
-                </View>
-                            
+                    }}
+                >
+                    <View style={styles.backicon_box}>
+                        <Image
+                            source={require('../../resources/backicon.png')}
+                            style={styles.backicon}
+                        />
+                    </View>
+                </Pressable>
+
                 <View style={styles.mainicon_box}>
                     <View style={styles.mainicon}>
                         <Image

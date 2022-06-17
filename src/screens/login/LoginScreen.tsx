@@ -1,8 +1,12 @@
 import React from 'react';
-import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase } from 'react-native';
+import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, Pressable } from 'react-native';
+import { TouchableHighlight } from 'react-native-gesture-handler';
 import { DP, SP } from '../../util/size';
 
-interface Props {}
+interface Props {
+    navigation,
+    route
+}
 interface State {
 
 }
@@ -22,7 +26,10 @@ export class LoginScreen extends React.Component<Props, State> {
         
     }
 
- 
+    setNavigationScreen(name) {
+        this.props.navigation.push(name);
+    } 
+        
     render(): React.ReactNode {
 
 
@@ -31,7 +38,26 @@ export class LoginScreen extends React.Component<Props, State> {
                 <StatusBar 
                     hidden={true}
                 />
-                            
+
+                {/* <TouchableOpacity 
+                    style={{width: 100, height: 100, backgroundColor: 'blue'}}
+                    onPress = { () => {
+                        //this.props.navigation.toggleDrawer();
+
+                        console.log(this.props.route.params.name)
+                    } }
+                />
+                
+               
+
+                <TouchableOpacity 
+                    style={{width: 100, height: 100, backgroundColor: 'red'}}
+                    onPress = { () => {
+                        this.props.navigation.push('setting');
+                    } }
+                /> */}
+
+     
                 <View style={styles.mainicon_box}>
                     <View style={styles.mainicon}>
                         <Image
@@ -90,12 +116,19 @@ export class LoginScreen extends React.Component<Props, State> {
                         </Text>
                     </View>
                 </View>
-
-                <View style={styles.login_box}>
-                    <Text style={styles.login_text}>
-                        이메일로 로그인 / 회원가입
-                    </Text>
-                </View>
+                
+                <Pressable
+                    onPress = { () => {
+                       this.setNavigationScreen('loginput');
+                    }}
+                >
+                   
+                    <View style={styles.login_box}>
+                        <Text style={styles.login_text}>
+                            이메일로 로그인 / 회원가입
+                        </Text>
+                    </View>
+                </Pressable>
             
             </View>
         )

@@ -20,30 +20,6 @@ import { ConditionsAgree } from './screens/ConditionsAgree';
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 interface Props {}
 interface State {}
 
@@ -88,7 +64,7 @@ export default class App extends React.Component<Props, State> { // 클래스 �
                 {
                     // 네비게이션을 쓰기위한 최상위 컨테이너 ( 필수임 ) 스택이던 드로우던 상관없이 필수 ( 최상단에 1번만 사용 )
                 }
-                {/* <NavigationContainer> 
+                <NavigationContainer> 
                     <Drawer.Navigator //드로우 네비게이션 생성
                         screenOptions={ // 스크린 옵션들
                             {
@@ -98,10 +74,10 @@ export default class App extends React.Component<Props, State> { // 클래스 �
                                     width: 200,
                                     backgroundColor: 'yellow'
                                 },
-                                swipeEnabled: true // 제스처로 ( 스와이프 ) 메뉴를 열수있게 할것인지 
+                                swipeEnabled: true, // 제스처로 ( 스와이프 ) 메뉴를 열수있게 할것인지 
                             }
                         }
-                        drawerContent={ (props)=>  // 드로우네비게이션에 기본 메뉴구성을 안쓰고 커스터마이징 메뉴를 쓸때 사용하는 프로퍼티
+                        drawerContent = { (props) =>  // 드로우네비게이션에 기본 메뉴구성을 안쓰고 커스터마이징 메뉴를 쓸때 사용하는 프로퍼티
                             <SwipeMenuView /> 
                         }
                         initialRouteName='navigation' // 초기 스크린 
@@ -116,12 +92,12 @@ export default class App extends React.Component<Props, State> { // 클래스 �
                             component={ AppNavigation } 
                         />
                     </Drawer.Navigator>
-                </NavigationContainer> */}
+                </NavigationContainer>
 
-                < ConditionsAgree />
+                {/* < ConditionsAgree /> */}
             </View>
         )
-    }
+    } 
 } // 클래스 끝
 
 
