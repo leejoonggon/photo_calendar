@@ -1,12 +1,44 @@
 import React from 'react';
-import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS } from 'react-native';
+import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS, Pressable } from 'react-native';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
 import { DP, SP } from '../../util/size';
+import { ItemView } from './views/ItemView';
 
-interface Props {}
+interface Props { navigation }
 interface State {
 
 }
+
+// const MENU_DATA = [
+//     {
+//         title: '내 정보',
+//         naviName: 'myprofile'
+//     },
+//     {
+//         title: '내 정보',
+//         naviName: 'myprofile'
+//     },
+//     {
+//         title: '내 정보',
+//         naviName: 'myprofile'
+//     },
+//     {
+//         title: '내 정보',
+//         naviName: 'myprofile'
+//     },
+//     {
+//         title: '내 정보',
+//         naviName: 'myprofile'
+//     },
+//     {
+//         title: '내 정보',
+//         naviName: 'myprofile'
+//     },
+//     {
+//         title: '내 정보',
+//         naviName: 'myprofile'
+//     }
+// ]
 
 export class SettingScreen extends React.Component<Props, State> {
 
@@ -35,7 +67,7 @@ export class SettingScreen extends React.Component<Props, State> {
 
                 <View style={styles.header_box}>
                     
-                <TouchableOpacity 
+                <Pressable 
                     // style={{width: 100, height: 100, backgroundColor: 'red'}}
                     onPress = { () => {
                         this.props.navigation.pop();
@@ -45,25 +77,47 @@ export class SettingScreen extends React.Component<Props, State> {
                         source={require('../../resources/backicon.png')}
                         style={styles.backicon}
                     />
-                </TouchableOpacity>
+                </Pressable>
                     
                     <Text style={styles.headertitle_text}>
                         설정
                     </Text>
                 </View>
+                {/* {
+                    MENU_DATA.map((data, index)=> {
+                        return(
+                            <ItemView
+                                key={data.title}
+                                navigation={this.props.navigation}
+                                naviName={data.naviName}
+                                title={data.title}
+                            />
+                        )
+                    })
+                } */}
 
 
+                <Pressable
+                    onPress={ () => {
+                        this.props.navigation.push('myprofile')
+                    }}
+                >
+                    <View style={styles.subtitle_box}>
+                        <Text style={styles.subtitle_text}>
+                            내정보
+                        </Text>
 
-                <View style={styles.subtitle_box}>
-                    <Text style={styles.subtitle_text}>
-                        내정보
-                    </Text>
-
-                    <Image
-                        source={require('../../resources/nexticon.png')}
-                        style={styles.nexticon}
-                    />
-                </View>
+                        <Image
+                            source={require('../../resources/nexticon.png')}
+                            style={styles.nexticon}
+                        />
+                    </View>
+                </Pressable>
+                <ItemView
+                    navigation={this.props.navigation}
+                    naviName={'myprofile'}
+                    title={'내 정보'}
+                />
 
                 <View style={styles.subtitle_box}>
                     <Text style={styles.subtitle_text}>
@@ -76,49 +130,78 @@ export class SettingScreen extends React.Component<Props, State> {
                     />
                 </View>
 
-                <View style={styles.subtitle_box}>
-                    <Text style={styles.subtitle_text}>
-                        잠금 설정
-                    </Text>
+                <Pressable
+                    onPress={ () => {
+                        this.props.navigation.push('password')
+                    }}
+                >
+                    <View style={styles.subtitle_box}>
+                        <Text style={styles.subtitle_text}>
+                            잠금 설정
+                        </Text>
 
-                    <Image
-                        source={require('../../resources/nexticon.png')}
-                        style={styles.nexticon}
-                    />
-                </View>
+                        <Image
+                            source={require('../../resources/nexticon.png')}
+                            style={styles.nexticon}
+                        />
+                    </View>
+                </Pressable>
+                <ItemView 
+                    navigation={this.props.navigation}
+                    naviName={'password'}
+                    title={'잠금 설정'}
+                />
 
-                <View style={styles.subtitle_box}>
-                    <Text style={styles.subtitle_text}>
-                        캘린더 설정
-                    </Text>
+                <Pressable
+                    onPress={ () => {
+                        this.props.navigation.push('calendarsetting')
+                    }}
+                >
+                    <View style={styles.subtitle_box}>
+                        <Text style={styles.subtitle_text}>
+                            캘린더 설정
+                        </Text>
 
-                    <Image
-                        source={require('../../resources/nexticon.png')}
-                        style={styles.nexticon}
-                    />
-                </View>
+                        <Image
+                            source={require('../../resources/nexticon.png')}
+                            style={styles.nexticon}
+                        />
+                    </View>
+                </Pressable>
 
-                <View style={styles.subtitle_box}>
-                    <Text style={styles.subtitle_text}>
-                        데이터 관리/내보내기
-                    </Text>
+                <Pressable
+                    onPress={ () => {
+                        this.props.navigation.push('dataexport')
+                    }}
+                >
+                    <View style={styles.subtitle_box}>
+                        <Text style={styles.subtitle_text}>
+                            데이터 관리/내보내기
+                        </Text>
 
-                    <Image
-                        source={require('../../resources/nexticon.png')}
-                        style={styles.nexticon}
-                    />
-                </View>
+                        <Image
+                            source={require('../../resources/nexticon.png')}
+                            style={styles.nexticon}
+                        />
+                    </View>
+                </Pressable>       
 
-                <View style={styles.subtitle_box}>
-                    <Text style={styles.subtitle_text}>
-                        문의하기
-                    </Text>
+                <Pressable
+                    onPress={ () => {
+                        this.props.navigation.push('inquire')
+                    }}
+                >
+                    <View style={styles.subtitle_box}>
+                        <Text style={styles.subtitle_text}>
+                            문의하기
+                        </Text>
 
-                    <Image
-                        source={require('../../resources/nexticon.png')}
-                        style={styles.nexticon}
-                    />
-                </View>
+                        <Image
+                            source={require('../../resources/nexticon.png')}
+                            style={styles.nexticon}
+                        />
+                    </View>
+                </Pressable>
 
                 <View style={styles.subtitle_box}>
                     <Text style={styles.subtitle_text}>
@@ -191,7 +274,7 @@ const styles = StyleSheet.create({
     },
 
     subtitle_box: {
-        // backgroundColor: 'blue',
+        backgroundColor: 'blue',
         height: DP(40),
         marginTop: DP(8),
         justifyContent: 'center',

@@ -1,9 +1,9 @@
 import React from 'react';
-import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS } from 'react-native';
+import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS, Pressable } from 'react-native';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
 import { DP, SP } from '../../util/size';
 
-interface Props {}
+interface Props { navigation }
 interface State {
 
 }
@@ -34,10 +34,17 @@ export class MyProfileScreen extends React.Component<Props, State> {
                 />
 
                 <View style={styles.header_box}>
-                    <Image
-                        source={require('../../resources/backicon.png')}
-                        style={styles.backicon}
-                    />
+                    <Pressable
+                        onPress={ () => {
+                            this.props.navigation.pop()
+                        }}
+                    >
+                        <Image
+                            source={require('../../resources/backicon.png')}
+                            style={styles.backicon}
+                        />
+                    </Pressable>
+
                     <Text style={styles.headertitle_text}>
                         내정보
                     </Text>

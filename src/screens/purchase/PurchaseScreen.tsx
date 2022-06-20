@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
-import { DP, SP } from '../util/size';
+import { DP, SP } from '../../util/size';
 
 interface Props {}
 interface State {
@@ -36,7 +36,7 @@ export class PurchaseScreen extends React.Component<Props, State> {
             <ScrollView>
                 <View style={styles.header_box}>
                     <Image
-                        source={require('./../resources/backicon_white.png')}
+                        source={require('../../resources/backicon_white.png')}
                         style={styles.backicon}
                     />
                     <Text style={styles.headertitle_text}>
@@ -61,7 +61,7 @@ export class PurchaseScreen extends React.Component<Props, State> {
                 <View style={styles.benefit_box}>
                     <View style={styles.benefit_one}>
                         <Image
-                            source={require('./../resources/adicon.png')}
+                            source={require('../../resources/adicon.png')}
                             // style={styles.adicon}
                         />
                         <Text style={styles.benefit_text_one}>
@@ -73,7 +73,7 @@ export class PurchaseScreen extends React.Component<Props, State> {
 
                     <View style={styles.benefit_two}>
                         <Image
-                            source={require('./../resources/popupicon.png')}
+                            source={require('../../resources/popupicon.png')}
                             // style={styles.popupicon}
                         />
                         <Text style={styles.benefit_text_two}>
@@ -85,7 +85,7 @@ export class PurchaseScreen extends React.Component<Props, State> {
 
                     <View style={styles.benefit_two}>
                         <Image
-                            source={require('./../resources/manageicon.png')}
+                            source={require('../../resources/manageicon.png')}
                             // style={styles.manageicon}
                         />
                         <Text style={styles.benefit_text_two}>
@@ -105,7 +105,7 @@ export class PurchaseScreen extends React.Component<Props, State> {
 
                     <View style={styles.benefit_two}>
                         <Image
-                            source={require('./../resources/likesicon.png')}
+                            source={require('../../resources/likesicon.png')}
                             // style={styles.likesicon}
                         />
                         <Text style={styles.benefit_text_two}>

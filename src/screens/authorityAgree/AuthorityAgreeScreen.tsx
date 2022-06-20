@@ -3,14 +3,14 @@ import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, 
 import { ScrollView } from 'react-native-gesture-handler';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
 import { displayPartsToString } from 'typescript';
-import { DP, SP } from './../util/size';
+import { DP, SP } from '../../util/size';
 
 interface Props {}
 interface State {
 
 }
 
-export class AuthorityAgree extends React.Component<Props, State> {
+export class AuthorityAgreeScreen extends React.Component<Props, State> {
 
     constructor(props) {
         super(props);     
@@ -49,7 +49,7 @@ export class AuthorityAgree extends React.Component<Props, State> {
                 <View style={styles.content_box}>
                     <View style={styles.content_title_box}>
                         <Image
-                            source={require('./../resources/saveicon.png')}
+                            source={require('../../resources/saveicon.png')}
                             style={styles.saveicon}
                         />
                         <Text style={styles.content_title_text}>
@@ -64,7 +64,7 @@ export class AuthorityAgree extends React.Component<Props, State> {
 
                     <View style={styles.content_title_box}>
                         <Image
-                            source={require('./../resources/saveicon.png')}
+                            source={require('../../resources/saveicon.png')}
                             style={styles.saveicon}
                         />
                         <Text style={styles.content_title_text}>
@@ -79,7 +79,7 @@ export class AuthorityAgree extends React.Component<Props, State> {
 
                     <View style={styles.content_title_box}>
                         <Image
-                            source={require('./../resources/saveicon.png')}
+                            source={require('../../resources/saveicon.png')}
                             style={styles.saveicon}
                         />
                         <Text style={styles.content_title_text}>

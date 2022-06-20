@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS } from 'react-native';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
-import { DP, SP } from './../util/size';
+import { DP, SP } from '../../util/size';
 
 interface Props {}
 interface State {
@@ -35,14 +35,14 @@ export class SearchScreen extends React.Component<Props, State> {
 
                 <View style={styles.header_box}>
                     <Image
-                        source={require('./../resources/backicon.png')}
+                        source={require('../../resources/backicon.png')}
                         style={styles.backicon}
                     />
                     <Text style={styles.headertitle_text}>
                         검색어를 입력 하세요
                     </Text>
                     <Image
-                        source={require('./../resources/search.png')}
+                        source={require('../../resources/search.png')}
                         style={styles.search}
                     />
                 </View>
@@ -78,7 +78,7 @@ export class SearchScreen extends React.Component<Props, State> {
                         </Text>
                        
                         <Image
-                            source={require('./../resources/fold.png')}
+                            source={require('../../resources/fold.png')}
                             style={styles.fold}
                         />
                     </View> 
@@ -102,7 +102,7 @@ export class SearchScreen extends React.Component<Props, State> {
                         </Text>
                        
                         <Image
-                            source={require('./../resources/fold.png')}
+                            source={require('../../resources/fold.png')}
                             style={styles.fold}
                         />
                     </View> 
@@ -126,7 +126,7 @@ export class SearchScreen extends React.Component<Props, State> {
                         </Text>
                        
                         <Image
-                            source={require('./../resources/fold.png')}
+                            source={require('../../resources/fold.png')}
                             style={styles.fold}
                         />
                     </View> 

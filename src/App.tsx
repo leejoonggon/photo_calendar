@@ -4,18 +4,18 @@ import { createDrawerNavigator } from '@react-navigation/drawer'; //네비게이
 import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/native'; //네비게이션
 import { SwipeMenuView } from './commonViews/SwipeMenuView';
 import AppNavigation from './AppNavigation';
-import { DateExportScreen } from './screens/dataExport/DateExportScreen';
-import { NewInputScreen } from './screens/newInput/NewInputScreen';
-import { SplashScreen } from './screens/SplashScreen';
-import { SearchScreen } from './screens/SearchScreen';
-import { PurchaseScreen } from './screens/PurchaseScreen';
-import { InquireScreen } from './screens/InquireScreen';
-import { EditInputScreen } from './screens/EditInputScreen';
-import { ImageClickScreen } from './screens/ImageClickScreen';
-import { TotalCalendarScreen } from './screens/TotalCalendarScreen';
-import { PasswordScreen } from './screens/PasswordScreen';
-import { AuthorityAgree } from './screens/AuthorityAgree';
-import { ConditionsAgree } from './screens/ConditionsAgree';
+// import { DataExportScreen } from './screens/dataExport/DataExportScreen';
+// import { NewInputScreen } from './screens/newInput/NewInputScreen';
+// import { SplashScreen } from './screens/splash/SplashScreen';
+// import { SearchScreen } from './screens/search/SearchScreen';
+// import { PurchaseScreen } from './screens/purchase/PurchaseScreen';
+// import { InquireScreen } from './screens/inquire/InquireScreen';
+// import { EditInputScreen } from './screens/editInput/EditInputScreen';
+// import { ImageClickScreen } from './screens/imageClick/ImageClickScreen';
+// import { TotalCalendarScreen } from './screens/totalCalendar/TotalCalendarScreen';
+// import { PasswordScreen } from './screens/password/PasswordScreen';
+// import { AuthorityAgree } from './screens/authorityAgree/AuthorityAgreeScreen';
+// import { ConditionsAgreeScreen } from './screens/conditionsAgree/ConditionsAgreeScreen';
 
 
 

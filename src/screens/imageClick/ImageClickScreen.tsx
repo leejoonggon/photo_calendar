@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS } from 'react-native';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
 import { formatDiagnosticsWithColorAndContext } from 'typescript';
-import { DP, SP } from '../util/size';
+import { DP, SP } from '../../util/size';
 
 interface Props {}
 interface State {
@@ -36,7 +36,7 @@ export class ImageClickScreen extends React.Component<Props, State> {
 
                 <View style={styles.header_box}>
                     <Image
-                        source={require('./../resources/menuicon_white.png')}
+                        source={require('../../resources/menuicon_white.png')}
                         style={styles.menuicon}
                     />
                     <View style={styles.photonumber_box}>
@@ -46,12 +46,12 @@ export class ImageClickScreen extends React.Component<Props, State> {
                     </View>
                    
                     <Image
-                        source={require('./../resources/upload.png')}
+                        source={require('../../resources/upload.png')}
                         style={styles.upload}
                     />
 
                     <Image
-                        source={require('./../resources/imagecancel.png')}
+                        source={require('../../resources/imagecancel.png')}
                         style={styles.imagecancel}
                     />
                 </View>

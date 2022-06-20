@@ -6,6 +6,30 @@ import { LogInputScreen } from './screens/logInput/LogInputScreen';
 import { SignUpScreen } from './screens/signUp/SignUpScreen';
 import { SettingScreen } from './screens/setting/SettingScreen';
 import { MyProfileScreen } from './screens/myProfile/MyProfileScreen';
+import { NewInputScreen } from './screens/newInput/NewInputScreen';
+import { CalendarSettingScreen } from './screens/calendarSetting/CalendarSettingScreen';
+import { DataExportScreen } from './screens/dataExport/DataExportScreen';
+import { LockSettingScreen } from './screens/lockSetting/LockSettingScreen';
+import { AuthorityAgreeScreen } from './screens/authorityAgree/AuthorityAgreeScreen';
+import { ConditionsAgreeScreen } from './screens/conditionsAgree/ConditionsAgreeScreen';
+import { EditInputScreen } from './screens/editInput/EditInputScreen';
+import { ImageClickScreen } from './screens/imageClick/ImageClickScreen';
+import { InquireScreen } from './screens/inquire/InquireScreen';
+import { MonthPhotoScreen } from './screens/monthPhoto/MonthPhotoScreen';
+import { PasswordScreen } from './screens/password/PasswordScreen';
+import { PurchaseScreen } from './screens/purchase/PurchaseScreen';
+import { SearchScreen } from './screens/search/SearchScreen';
+import { SplashScreen } from './screens/splash/SplashScreen';
+import { TotalCalendarScreen } from './screens/totalCalendar/TotalCalendarScreen';
+import { MainScreen } from './screens/main/MainScreen';
+
+
+
+import { ScreenStackHeaderLeftView } from 'react-native-screens';
+
+
+
+
 
 interface Props {}
 interface State {}
@@ -36,7 +60,7 @@ export default class AppNavigation extends React.Component<Props, State> {
                         screenOptions={{
                             headerShown: false
                         }}
-                        initialRouteName='login' 
+                        initialRouteName='splash' 
                     > 
                         {
                             // 스택 네비게이션 스크린들
@@ -48,6 +72,15 @@ export default class AppNavigation extends React.Component<Props, State> {
                                 name: '이유진',
                                 age: 30
                             }}
+                        />
+
+                        <Stack.Screen
+                            name= 'splash'
+                            component={ SplashScreen }
+                        />
+                        <Stack.Screen
+                            name= 'main'
+                            component={ MainScreen }
                         />
                         <Stack.Screen
                             name='loginput'
@@ -65,6 +98,77 @@ export default class AppNavigation extends React.Component<Props, State> {
                             name='myprofile'
                             component={ MyProfileScreen }
                         />
+
+                        <Stack.Screen
+                            name='newinput'
+                            component={ NewInputScreen }
+                        />
+
+                        <Stack.Screen
+                            name='calendarsetting'
+                            component={ CalendarSettingScreen }
+                        />
+
+                        <Stack.Screen
+                            name='dataexport'
+                            component={ DataExportScreen }
+                        />
+
+                        <Stack.Screen  
+                            name= 'locksetting'
+                            component={ LockSettingScreen}
+                        />
+
+                        <Stack.Screen
+                            name= 'authorityagree'
+                            component={ AuthorityAgreeScreen }
+                        />
+
+                        <Stack.Screen
+                            name= 'conditionsagree'
+                            component={ ConditionsAgreeScreen }
+                        />
+
+                        <Stack.Screen 
+                            name= 'editinput'
+                            component={ EditInputScreen }
+                        />
+                        
+                        <Stack.Screen 
+                            name= 'imageclick'
+                            component={ ImageClickScreen }
+                        />
+
+                        <Stack.Screen   
+                            name= 'inquire'
+                            component={ InquireScreen }
+                        />
+
+                        <Stack.Screen   
+                            name= 'monthphoto'
+                            component={ MonthPhotoScreen }
+                        />
+
+                        <Stack.Screen
+                            name= 'password'
+                            component={ PasswordScreen }
+                        />
+
+                        <Stack.Screen
+                            name= 'purchase'
+                            component={ PurchaseScreen }
+                        />
+
+                        <Stack.Screen 
+                            name= 'search'
+                            component={ SearchScreen }
+                        /> 
+
+                        <Stack.Screen
+                            name= 'totalcalendar'
+                            component={ TotalCalendarScreen }
+                        />
+
                     </Stack.Navigator>
 
             </View>

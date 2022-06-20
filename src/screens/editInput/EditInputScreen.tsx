@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS } from 'react-native';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
 import { formatDiagnosticsWithColorAndContext } from 'typescript';
-import { DP, SP } from './../util/size';
+import { DP, SP } from '../../util/size';
 
 interface Props {}
 interface State {
@@ -36,7 +36,7 @@ export class EditInputScreen extends React.Component<Props, State> {
 
                 <View style={styles.header_box}>
                     <Image
-                        source={require('./../resources/backicon.png')}
+                        source={require('../../resources/backicon.png')}
                         style={styles.backicon}
                     />
                     <Text style={styles.headertitle_text}>
@@ -49,13 +49,13 @@ export class EditInputScreen extends React.Component<Props, State> {
                     */}
                     
                     <Image
-                        source={require('./../resources/saveicon.png')}
+                        source={require('../../resources/saveicon.png')}
                         style={styles.saveicon}
                     />
                 </View>
 
                 <Image
-                    source={require('./../resources/imagecancel.png')}
+                    source={require('../../resources/imagecancel.png')}
                     style={styles.imagecancel} 
                 />
                             
@@ -116,7 +116,7 @@ export class EditInputScreen extends React.Component<Props, State> {
                         컬러 설정
                     </Text>
                     <Image
-                        source={require('./../resources/fold.png')}
+                        source={require('../../resources/fold.png')}
                         style={styles.fold}
                     />
                 </View>

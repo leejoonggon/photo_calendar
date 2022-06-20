@@ -76,9 +76,15 @@ export class LoginScreen extends React.Component<Props, State> {
                 </View>
 
                 <View style={styles.guestlogin_box}>
-                    <Text style={styles.guestlogin_text}>
-                        로그인 / 회원가입 안할래요:)
-                    </Text>
+                    <Pressable
+                        onPress={()=> {
+                            this.props.navigation.push('main')
+                        } }
+                    >
+                        <Text style={styles.guestlogin_text}>
+                            로그인 / 회원가입 안할래요:)
+                        </Text>
+                    </Pressable>
                 </View>
 
                 <View style={styles.googlelogin_box}>

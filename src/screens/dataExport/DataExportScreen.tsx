@@ -1,16 +1,16 @@
 import React from 'react';
-import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS } from 'react-native';
+import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS, Pressable } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
 import { displayPartsToString } from 'typescript';
 import { DP, SP } from '../../util/size';
 
-interface Props {}
+interface Props { navigation }
 interface State {
 
 }
 
-export class DateExportScreen extends React.Component<Props, State> {
+export class DataExportScreen extends React.Component<Props, State> {
 
     constructor(props) {
         super(props);     
@@ -38,10 +38,17 @@ export class DateExportScreen extends React.Component<Props, State> {
             <ScrollView>
 
                 <View style={styles.header_box}>
-                    <Image
-                        source={require('../../resources/backicon.png')}
-                        style={styles.backicon}
-                    />
+                    <Pressable
+                        onPress={ () => {
+                            this.props.navigation.pop()
+                        }}
+                    >
+                        <Image
+                            source={require('../../resources/backicon.png')}
+                            style={styles.backicon}
+                        />
+                    </Pressable>
+
                     <Text style={styles.headertitle_text}>
                         데이터 관리/내보내기
                     </Text>

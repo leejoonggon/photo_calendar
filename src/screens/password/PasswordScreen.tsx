@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS } from 'react-native';
+import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS, Pressable } from 'react-native';
 import { ScrollView } from 'react-native-gesture-handler';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
-import { DP, SP } from '../util/size';
+import { DP, SP } from '../../util/size';
 
-interface Props {}
+interface Props { navigation }
 interface State {
 
 }
@@ -113,10 +113,19 @@ export class PasswordScreen extends React.Component<Props, State> {
                         <Text style={styles.password_number_fourth}>
                             0
                         </Text>  
-                        <Image
-                            source={require('./../resources/delete.png')}
-                            style={styles.delete}
-                        />
+
+
+                        <Pressable
+                            style={ {backgroundColor: 'yellow'} }
+                            onPress={ () => {
+                                this.props.navigation.pop()
+                            }}
+                        >
+                            <Image
+                                source={require('../../resources/delete.png')}
+                                style={styles.delete}
+                            />
+                        </Pressable>
                         
                     </View>
                 </View>

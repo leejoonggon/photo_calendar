@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, View, StatusBar, Image, TouchableOpacity, TextInput, Text, ViewBase, ShadowPropTypesIOS } from 'react-native';
 import symbolicateStackTrace from 'react-native/Libraries/Core/Devtools/symbolicateStackTrace';
 import { formatDiagnosticsWithColorAndContext } from 'typescript';
-import { DP, SP } from '../util/size';
+import { DP, SP } from '../../util/size';
 
 interface Props {}
 interface State {
@@ -36,7 +36,7 @@ export class TotalCalendarScreen extends React.Component<Props, State> {
 
                 <View style={styles.header_box}>
                     <Image
-                        source={require('./../resources/menu.png')}
+                        source={require('../../resources/menu.png')}
                         style={styles.menuicon}
                     />
 
@@ -45,12 +45,12 @@ export class TotalCalendarScreen extends React.Component<Props, State> {
                     </Text>
 
                     <Image
-                        source={require('./../resources/shareicon.png')}
+                        source={require('../../resources/shareicon.png')}
                         style={styles.shareicon}
                     />
 
                     <Image
-                        source={require('./../resources/calendaricon.png')}
+                        source={require('../../resources/calendaricon.png')}
                         style={styles.calendaricon}
                     />
                 </View>
@@ -60,7 +60,7 @@ export class TotalCalendarScreen extends React.Component<Props, State> {
                         최신순
                     </Text>
                     <Image
-                        source={require('./../resources/down.png')}
+                        source={require('../../resources/down.png')}
                         style={styles.down}
                     />
                 </View>
