@@ -4,6 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer'; //네비게이
 import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/native'; //네비게이션
 import { SwipeMenuView } from './commonViews/SwipeMenuView';
 import AppNavigation from './AppNavigation';
+import SplashScreen from 'react-native-splash-screen';
 // import { DataExportScreen } from './screens/dataExport/DataExportScreen';
 // import { NewInputScreen } from './screens/newInput/NewInputScreen';
 // import { SplashScreen } from './screens/splash/SplashScreen';
@@ -43,6 +44,11 @@ export default class App extends React.Component<Props, State> { // 클래스 �
     }
     
     componentDidMount(): void { // 페이지가 렌더링 된 후 자동 실행되는 함수
+        
+        setTimeout(() => {
+            SplashScreen.hide();
+        }, 2000);
+        
         let test8 = ''; //클래스 내부이지만 함수 안에서는 let 또는 var 선언 가능
 
         // test1 = 1; // 한번 값이 정해진 const 는 값이 변경될 수 없다 ( 오류 )

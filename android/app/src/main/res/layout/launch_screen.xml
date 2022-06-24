@@ -11,9 +11,9 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="88dp"
-        android:background="#CD0000"
-        app:srcCompat="@drawable/logo" />
+        android:layout_height="73dp"
+        android:background="#00FFFFFF"
+        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView"
