@@ -10,7 +10,7 @@ interface State {
 
 }
 
-export class DayCalendarScreen extends React.Component<Props, State> {
+export class DayCalendarPurchaseScreen extends React.Component<Props, State> {
 
     constructor(props) {
         super(props);     
