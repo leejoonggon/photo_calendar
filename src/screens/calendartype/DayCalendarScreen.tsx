@@ -227,8 +227,8 @@ const styles = StyleSheet.create({
     },
 
     totalpics_box: {
-        // backgroundColor: 'rgba (51, 51, 51, 0.5)',
-        backgroundColor: 'grey',
+        backgroundColor: 'rgba(51, 51, 51, 0.5)',
+        // backgroundColor: 'grey',
         height: DP(24),
         width: DP(24),
         marginTop: DP(144),
@@ -264,7 +264,8 @@ const styles = StyleSheet.create({
     },   
 
     color: {
-        backgroundColor: '#F2ECB7',
+        // backgroundColor: '#F2ECB7',
+        backgroundColor: 'rgba(242, 236, 183, 0.8)',
         height: DP(24),
         width: DP(8),
         borderRadius: DP(25),

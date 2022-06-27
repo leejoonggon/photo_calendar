@@ -31,14 +31,16 @@ export class LoginScreen extends React.Component<Props, State> {
     } 
         
     render(): React.ReactNode {
-
+        console.log(this.props.aa)
 
         return(
             <View style={styles.container}>
                 <StatusBar 
                     hidden={true}
                 />
-
+                <Text>
+                   {this.props.aa}
+                </Text>
                 {/* <TouchableOpacity 
                     style={{width: 100, height: 100, backgroundColor: 'blue'}}
                     onPress = { () => {
@@ -58,7 +60,7 @@ export class LoginScreen extends React.Component<Props, State> {
                 /> */}
 
      
-                <View style={styles.mainicon_box}>
+                {/* <View style={styles.mainicon_box}>
                     <View style={styles.mainicon}>
                         <Image
                             source={require('../../resources/mainicon.png')}
@@ -134,7 +136,7 @@ export class LoginScreen extends React.Component<Props, State> {
                             이메일로 로그인 / 회원가입
                         </Text>
                     </View>
-                </Pressable>
+                </Pressable> */}
             
             </View>
         )
