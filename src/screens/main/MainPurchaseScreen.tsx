@@ -10,7 +10,7 @@ interface State {
 
 }
 
-export class MainScreen extends React.Component<Props, State> {
+export class MainPurchaseScreen extends React.Component<Props, State> {
 
     constructor(props) {
         super(props);     
@@ -75,7 +75,7 @@ export class MainScreen extends React.Component<Props, State> {
 
                         <View style={styles.nicknamebox}>
                             <Text style={styles.nickname}>
-                                닉네임은이정도의길이면될듯
+                                ryuryuu030@naver.com
                             </Text>
                         </View>
 
@@ -118,50 +118,30 @@ export class MainScreen extends React.Component<Props, State> {
                         </View>
 
                         <View style={styles.menutitlebox}>
-                            <Pressable
-                                onPress={ () => {
-                                    this.props.navigation.push('daycalendar')
-                                }}
-                            >
-                                <Text style={styles.menutitle}>
-                                    일 별 보기
-                                </Text>
-                            </Pressable>
+                            <Text style={styles.menutitle}>
+                                일 별 보기
+                            </Text>
                         </View>
+
+                        <View style={styles.line}/>
 
                         <View style={styles.menutitlebox}>
                             <Text style={styles.menutitle}>
                                 기본 캘린더
                             </Text>
                         </View>
-                        
-                        <View style={styles.line}/>                      
 
                         <View style={styles.menutitlebox}>
                             <Text style={styles.menutitle}>
-                                가이드
+                                다이어트
                             </Text>
                         </View>
 
-                        <View style={styles.menutitlebox}>
-                            <Pressable
-                                onPress={() => {
-                                    this.props.navigation.push('mainmenupurchase')
-                                } }
-                            >                           
-                                <Text style={styles.menutitle}>
-                                    구매하기
-                                </Text>
-                            </Pressable>
+                        <View style={styles.calendaraddbox}>
+                            <Text style={styles.calendaradd}>
+                                + 캘린더 추가
+                            </Text>
                         </View>
-
-                        <View style={styles.adline}/>
-
-                        <View style={styles.adbox_top}/>
-
-                        <View style={styles.adbox_bottom}/>
-
-
 
                      </View>
                 {/* </ScrollView>          */}
@@ -201,7 +181,7 @@ const styles = StyleSheet.create({
     },
 
     menubox: {
-        backgroundColor: 'pink',
+        backgroundColor: 'white',
         height: '100%',
         position: 'absolute',
         width: DP(256),
@@ -252,7 +232,7 @@ const styles = StyleSheet.create({
     },
 
     myimage: {
-        backgroundColor: 'green',
+        backgroundColor: 'purple',
         position: 'absolute',
         height: DP(60),
         width: DP(60),
@@ -300,30 +280,24 @@ const styles = StyleSheet.create({
         marginBottom: DP(8),
     },
 
-    adline: {
-        backgroundColor: '#EEEEEE',
-        height: DP(1),
-        width: DP(224),
+    calendaraddbox: {
+        // backgroundColor: 'brown',
+        height: DP(32),
+        width: '100%', 
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+
+    calendaradd: {
+        // backgroundColor: 'red',
+        height: DP(24),
+        width: DP(138),
         marginLeft: DP(16),
-        marginTop: DP(74),
+        fontSize: SP(16),
+        color: '#9489CD',
+        textAlignVertical: 'center',
     },
 
-    adbox_top: {
-        backgroundColor: 'yellow',
-        height: DP(56),
-        width: DP(182),
-        marginLeft: DP(37),
-        marginTop: DP(16),
-        borderRadius: DP(4),
-    },
 
-    adbox_bottom: {
-        backgroundColor: 'orange',
-        height: DP(56),
-        width: DP(182),
-        marginLeft: DP(37),
-        marginTop: DP(8),
-        borderRadius: DP(4),
-    },
 
 })

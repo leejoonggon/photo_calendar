@@ -22,6 +22,11 @@ import { SearchScreen } from './screens/search/SearchScreen';
 import { SplashScreen } from './screens/splash/SplashScreen';
 import { TotalCalendarScreen } from './screens/totalCalendar/TotalCalendarScreen';
 import { MainScreen } from './screens/main/MainScreen';
+import { MainPurchaseScreen } from './screens/main/MainPurchaseScreen';
+import { DayCalendarScreen } from './screens/calendartype/DayCalendarScreen';
+
+
+
 
 
 
@@ -167,6 +172,16 @@ export default class AppNavigation extends React.Component<Props, State> {
                         <Stack.Screen
                             name= 'totalcalendar'
                             component={ TotalCalendarScreen }
+                        />
+
+                        <Stack.Screen   
+                            name= 'mainmenupurchase'
+                            component={ MainPurchaseScreen }
+                        />
+
+                        <Stack.Screen   
+                            name= 'daycalendar'
+                            component={ DayCalendarScreen }
                         />
 
                     </Stack.Navigator>

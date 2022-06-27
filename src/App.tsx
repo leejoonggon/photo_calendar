@@ -5,6 +5,7 @@ import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/
 import { SwipeMenuView } from './commonViews/SwipeMenuView';
 import AppNavigation from './AppNavigation';
 import SplashScreen from 'react-native-splash-screen';
+// import MainPurchaseScreen from './screen/main/MainPurchaseScreen';
 // import { DataExportScreen } from './screens/dataExport/DataExportScreen';
 // import { NewInputScreen } from './screens/newInput/NewInputScreen';
 // import { SplashScreen } from './screens/splash/SplashScreen';
